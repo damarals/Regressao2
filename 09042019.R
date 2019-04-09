@@ -31,3 +31,9 @@ anova(model, test = 'Chisq')
 model = glm(resp ~ Bloco + Tipo*Nivel*Auxina, family = binomial(link='logit'))
 summary(model)
 anova(model, test = 'Chisq')
+
+model = glm(resp ~ Bloco + Tipo*Auxina, family = binomial(link='logit'))
+summary(model)
+anova(model, test = 'Chisq')
+
+tapply(y , list(Auxina,Tipo), mean)
